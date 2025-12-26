@@ -43,6 +43,8 @@ $badstrings = [ // Phrases listed in here will be prohibited from being used in 
 
 // Do not edit anything below this line unless you know for sure what you're doing
 
+ini_set('default_charset', 'UTF-8');
+
 if (version_compare(PHP_VERSION, '7.4.0', '<')) {
     die('<a href="//github.com/LexiTsunami/SakuraLite">SakuraLite</a> requires PHP 7.4 or newer. You are currently running PHP ' . PHP_VERSION);
 }
@@ -111,6 +113,7 @@ function bbserror(string $message): void {
     $pagesubtitle = $subtitle ? '<h3>'.$subtitle.'</h3>' : '';
     echo <<<HTML
 <title>$pagetitle</title>
+<meta charset="UTF-8">
 <body bgcolor="$background" text="$textcolor" link="$linkcolor" vlink="$linkhover" style="font-family:$fonts;">
 <center><h1>$pagetitle</h1>$pagesubtitle</center>
 <hr>
@@ -205,6 +208,7 @@ if (!empty($bulletpoints)) {
 
     return <<<HTML
 <title>$pagetitle</title>
+<meta charset="UTF-8">
 <body bgcolor="$background" text="$textcolor" link="$linkcolor" vlink="$linkhover" style="font-family:$fonts;">
 <center><h1>$pagetitle</h1>$pagesubtitle<form method="POST" action="$sakuralitefile" style="margin-bottom:0px;">
 <table><tbody>
@@ -245,6 +249,7 @@ if ($mode === 'manage') {
     $pagesubtitle = $subtitle ? '<h3>'.$subtitle.'</h3>' : '';
         echo <<<HTML
 <title>$pagetitle</title>
+<meta charset="UTF-8">
 <body bgcolor="$background" text="$textcolor" link="$linkcolor" vlink="$linkhover" style="font-family:$fonts;">
 <center><h1>$pagetitle</h1>$pagesubtitle</center>
 <hr>
@@ -323,6 +328,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     echo <<<HTML
 <title>$pagetitle</title>
+<meta charset="UTF-8">
 <body bgcolor="$background" text="$textcolor" link="$linkcolor" vlink="$linkhover" style="font-family:$fonts;">
 <center><h1>$pagetitle</h1>$pagesubtitle</center>
 <hr>
