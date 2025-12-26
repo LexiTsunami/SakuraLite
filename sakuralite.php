@@ -1,5 +1,5 @@
 <?php
-// SakuraLite: A Small BBS Created By LexiTsunami (Version 1.1)
+// SakuraLite: A Small BBS Created By LexiTsunami (Version 1.2)
 // Stay up to date @ https://github.com/LexiTsunami/SakuraLite
 
 // Aesthetics
